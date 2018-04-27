@@ -1,6 +1,8 @@
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 const CONFIG = require('./config');
 module.exports = {
   entry: {
@@ -12,19 +14,17 @@ module.exports = {
   output: {
     filename: '[name].js',
   },
+  mode: 'development',
   module: {
-    rules: [
-      {
+    rules: [{
         enforce: 'pre',
         test: /\.(ts|tsx)?$/,
-        use: [
-          {
-            loader: 'tslint-loader',
-            options: {
-              emitErrors: false,
-            }
+        use: [{
+          loader: 'tslint-loader',
+          options: {
+            emitErrors: false,
           }
-        ],
+        }],
         exclude: /node_modules/,
       },
       {
@@ -40,17 +40,19 @@ module.exports = {
                 sourceMap: true,
                 plugins: function () {
                   return [
-                    require('autoprefixer')({ browsers: [
-                      'Chrome >= 35',
-                      'Firefox >= 38',
-                      'Edge >= 12',
-                      'Explorer >= 10',
-                      'iOS >= 8',
-                      'Safari >= 8',
-                      'Android 2.3',
-                      'Android >= 4',
-                      'Opera >= 12',
-                    ]}),
+                    require('autoprefixer')({
+                      browsers: [
+                        'Chrome >= 35',
+                        'Firefox >= 38',
+                        'Edge >= 12',
+                        'Explorer >= 10',
+                        'iOS >= 8',
+                        'Safari >= 8',
+                        'Android 2.3',
+                        'Android >= 4',
+                        'Opera >= 12',
+                      ]
+                    }),
                   ];
                 },
               },
@@ -59,7 +61,7 @@ module.exports = {
             'happypack/loader?id=sass',
           ],
         }),
-        
+
       },
       {
         test: /\.(css)$/,
@@ -83,7 +85,18 @@ module.exports = {
       chunks: ['app'],
       template: CONFIG.HTML_TEMPLATE_PATH,
     }),
-
+    new webpack.DllReferencePlugin({
+      context: CONFIG.ROOT_PATH,
+      manifest: require('./dll/vender-manifest.json'),
+    }),
+    new CopyWebpackPlugin([{
+      from: CONFIG.DLL_PATH,
+      to: 'dll',
+    }]),
+    new HtmlWebpackIncludeAssetsPlugin({
+      assets: ['dll/vender.dll.js'],
+      append: false,
+    }),
     new ExtractTextPlugin({
       disable: true,
       filename: 'styles.css',

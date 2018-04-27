@@ -1,7 +1,6 @@
 const merge = require('webpack-merge');
 const config_common = require('./webpack/common');
 const config_happypack = require('./webpack/happypack.config');
-// const config_manifest = require('./webpack/mainfest');
 
 let webpack_config =  merge.smart(config_common, config_happypack);
 
@@ -15,6 +14,5 @@ let webpack_config =  merge.smart(config_common, config_happypack);
 
 const config_dev = require('./webpack/dev.js');
 webpack_config = merge.smart(webpack_config, config_dev)
-// webpack_config = merge.smart(webpack_config, config_manifest);
 
 module.exports = webpack_config;

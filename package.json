@@ -31,11 +31,13 @@
     "babel-plugin-transform-imports": "^1.5.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "happypack": "^5.0.0",
+    "html-webpack-include-assets-plugin": "^1.0.4",
     "html-webpack-plugin": "^3.2.0",
     "json-loader": "^0.5.7",
     "node-sass": "^4.9.0",
@@ -62,6 +64,7 @@
   "scripts": {
     "dev": "yarn start",
     "start": "cross-env node ./bin/dev.server.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --progress"
+    "build:prod": "cross-env NODE_ENV=production webpack --progress",
+    "dll": "cross-env NODE_ENV=production webpack --progress --colors --config webpack/dll.config.js"
   }
 }

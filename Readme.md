@@ -4,6 +4,7 @@ A SPA Web use [Typescript](http://www.typescriptlang.org/) + [React](https://rea
 
 ## TODO
 - [x] add scss
-- [ ] clean all the warnings
+- [x] add react-router4.0
+- [x] clean all the warnings
 - [ ] add prod/dev config
-- [ ] add react-router4.0
+- [ ] add command to generate view template
