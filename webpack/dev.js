@@ -30,36 +30,39 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /(node_modules)/,
-        use: [
-          'style-loader',
-          'happypack/loader?id=css_module',
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins: function () {
-                return [
-                  require('autoprefixer')({ browsers: [
-                    'Chrome >= 35',
-                    'Firefox >= 38',
-                    'Edge >= 12',
-                    'Explorer >= 10',
-                    'iOS >= 8',
-                    'Safari >= 8',
-                    'Android 2.3',
-                    'Android >= 4',
-                    'Opera >= 12',
-                  ]}),
-                ];
+        loader: ExtractTextPlugin.extract({
+          use: [
+            'style-loader',
+            'happypack/loader?id=css_module',
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                plugins: function () {
+                  return [
+                    require('autoprefixer')({ browsers: [
+                      'Chrome >= 35',
+                      'Firefox >= 38',
+                      'Edge >= 12',
+                      'Explorer >= 10',
+                      'iOS >= 8',
+                      'Safari >= 8',
+                      'Android 2.3',
+                      'Android >= 4',
+                      'Opera >= 12',
+                    ]}),
+                  ];
+                },
               },
             },
-          },
-          'resolve-url-loader',
-          'happypack/loader?id=sass',
-        ],
+            'resolve-url-loader',
+            'happypack/loader?id=sass',
+          ],
+        }),
+        
       },
       {
-        test: /\.css$/,
+        test: /\.(css)$/,
         loader: ExtractTextPlugin.extract({
           use: 'happypack/loader?id=css',
           fallback: 'style-loader',
@@ -79,6 +82,12 @@ module.exports = {
       filename: CONFIG.INDEX_HTML,
       chunks: ['app'],
       template: CONFIG.HTML_TEMPLATE_PATH,
+    }),
+
+    new ExtractTextPlugin({
+      disable: true,
+      filename: 'styles.css',
+      allChunks: true,
     }),
   ],
 }
