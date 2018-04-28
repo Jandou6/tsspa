@@ -10,5 +10,5 @@ git clone git@github.com:Jandou6/tsspa.git
 - [x] add scss
 - [x] add react-router4.0
 - [x] clean all the warnings
-- [ ] add prod/dev config
+- [x] add prod/dev config
 - [ ] add command to generate view template
