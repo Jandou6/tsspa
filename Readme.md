@@ -7,8 +7,7 @@ A SPA Web use [Typescript](http://www.typescriptlang.org/) + [React](https://rea
 git clone git@github.com:Jandou6/tsspa.git
 ```
 ## TODO
-- [x] add scss
-- [x] add react-router4.0
 - [x] clean all the warnings
 - [x] add prod/dev config
+- [ ] add react-loadable
 - [ ] add command to generate view template

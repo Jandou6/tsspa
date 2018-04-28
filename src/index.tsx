@@ -4,7 +4,6 @@ import { RouterCompnent } from './routers';
 
 function init() {
   const dom = document.getElementById('app');
-  console.log(dom);
   render(
     <RouterCompnent/>,
     dom,

@@ -5,6 +5,7 @@ let WebpackDevServer = require("webpack-dev-server");
 
 
 const devServerOptions = Object.assign({}, webpack_config.devServer, {
+  historyApiFallback: true,
   stats: {
     colors: true
   }
