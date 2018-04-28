@@ -67,8 +67,10 @@
   },
   "scripts": {
     "dev": "yarn start",
-    "start": "cross-env node ./bin/dev.server.js",
-    "build": "cross-env NODE_ENV=production webpack --progress",
+    "clean": "rm -rf ./dist",
+    "start": "node ./bin/dev.server.js",
+    "start:prod": "node ./bin/server.js",
+    "build": "yarn clean && cross-env NODE_ENV=production webpack --progress",
     "dll": "cross-env NODE_ENV=production webpack --progress --colors --config webpack/dll.config.js"
   }
 }
