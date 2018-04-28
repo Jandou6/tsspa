@@ -6,7 +6,9 @@ export class HomeComponent extends React.Component {
   render() {
     return (
       <div styleName="home-page">
-        Home
+        <h1>TypeScript SPA.</h1>
+        <p>This is a demo page.</p>
+        <p>You can also click <a href="#">/about</a> to try react-router.</p>
       </div>
     );
   }
