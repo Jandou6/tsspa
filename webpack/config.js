@@ -15,6 +15,7 @@ module.exports = {
     'react-dom',
     'react-css-modules',
     'react-router-dom',
+    'react-loadable',
     //TODO: maybe add in the future.
     // 'redux',
     // 'react-redux',
