@@ -25,6 +25,13 @@
     "@types/node" "*"
     "@types/react" "*"
 
+"@types/react-loadable@^5.3.4":
+  version "5.3.4"
+  resolved "http://registry.npm.taobao.org/@types/react-loadable/download/@types/react-loadable-5.3.4.tgz#1d689fb233f816916c0df2d0a346c49f071b1cb3"
+  dependencies:
+    "@types/react" "*"
+    "@types/webpack" "*"
+
 "@types/react-router-dom@^4.2.6":
   version "4.2.6"
   resolved "http://registry.npm.taobao.org/@types/react-router-dom/download/@types/react-router-dom-4.2.6.tgz#9f7eb3c0e6661a9607d878ff8675cc4ea95cd276"
@@ -45,6 +52,25 @@
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.3.12.tgz#68d9146f3e9797e38ffbf22f7ed1dde91a2cfd2e"
   dependencies:
     csstype "^2.2.0"
+
+"@types/tapable@*":
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/@types/tapable/download/@types/tapable-1.0.2.tgz#e13182e1b69871a422d7863e11a4a6f5b814a4bd"
+
+"@types/uglify-js@*":
+  version "3.0.2"
+  resolved "http://registry.npm.taobao.org/@types/uglify-js/download/@types/uglify-js-3.0.2.tgz#f30c75458d18e8ee885c792c04adcb78a13bc286"
+  dependencies:
+    source-map "^0.6.1"
+
+"@types/webpack@*":
+  version "4.1.4"
+  resolved "http://registry.npm.taobao.org/@types/webpack/download/@types/webpack-4.1.4.tgz#553fe3f7ac1d8b403ebb01f25b31272b234d5ef6"
+  dependencies:
+    "@types/node" "*"
+    "@types/tapable" "*"
+    "@types/uglify-js" "*"
+    source-map "^0.6.0"
 
 abbrev@1:
   version "1.1.1"
@@ -5430,7 +5456,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.4, prop-types@^15.6.0:
+prop-types@^15.5.0, prop-types@^15.5.4, prop-types@^15.6.0:
   version "15.6.1"
   resolved "http://registry.npm.taobao.org/prop-types/download/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -5591,6 +5617,12 @@ react-dom@^16.3.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-loadable@^5.3.1:
+  version "5.3.1"
+  resolved "http://registry.npm.taobao.org/react-loadable/download/react-loadable-5.3.1.tgz#9699e9a08fed49bacd69caaa282034b62a76bcdd"
+  dependencies:
+    prop-types "^15.5.0"
 
 react-router-dom@^4.2.2:
   version "4.2.2"
@@ -6362,7 +6394,7 @@ source-map@^0.4.2:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.6.1, source-map@~0.6.1:
+source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "http://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 

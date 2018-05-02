@@ -6,8 +6,21 @@ import {
   Switch,
 } from 'react-router-dom';
 import { render } from 'react-dom';
-import { HomeComponent } from './Home';
-import { AboutComponent } from './About';
+
+import * as Loadable from 'react-loadable';
+const HomeComponent = Loadable({
+  loader: () => import('./Home' /* webpackChunkName:"home" */),
+  loading() {
+    return <div>Loading....</div>;
+  },
+});
+
+const AboutComponent = Loadable({
+  loader: () => import('./About' /* webpackChunkName:"about" */),
+  loading() {
+    return <div>Loading....</div>;
+  },
+});
 
 export class RouterCompnent extends React.Component {
   render() {

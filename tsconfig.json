@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "module": "esnext",
     "experimentalDecorators": true,
     "target": "es6",
     "jsx": "react",
     "lib": ["dom", "es2015"],
     "moduleResolution": "node",
-    "removeComments": true,
+    "removeComments": false,
     "sourceMap": true,
     "strictFunctionTypes": false,
     "paths": {

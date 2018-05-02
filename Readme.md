@@ -33,5 +33,5 @@ yarn start:prod
 ## TODO
 - [x] clean all the warnings
 - [x] add prod/dev config
-- [ ] add react-loadable
+- [x] add react-loadable
 - [ ] add command to generate view template

@@ -3,7 +3,7 @@ import * as CSSModules from 'react-css-modules';
 const style = require('./style.scss');
 import { Link } from 'react-router-dom';
 @CSSModules(style, {allowMultiple: true})
-export class AboutComponent extends React.Component {
+export default class AboutComponent extends React.Component {
   render() {
     return (
       <div styleName="about-page">
