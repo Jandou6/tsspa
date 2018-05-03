@@ -73,6 +73,7 @@
     "react-router-dom": "^4.2.2"
   },
   "scripts": {
+    "test": "echo hello test",
     "dev": "yarn start",
     "clean": "rm -rf ./dist",
     "cli": "node bin/cli",
