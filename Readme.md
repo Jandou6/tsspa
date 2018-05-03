@@ -40,4 +40,4 @@ yarn cli -v
 - [x] clean all the warnings
 - [x] add prod/dev config
 - [x] add react-loadable
-- [x] add command to generate view template
+- [x] add command to generate view template.
