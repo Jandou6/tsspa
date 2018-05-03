@@ -4,6 +4,8 @@ A SPA Web use [Typescript](http://www.typescriptlang.org/) + [React](https://rea
 
 You can also use cli to create view.
 
+[中文说明](https://github.com/Jandou6/tsspa/blob/master/docs/Readme-zh.md)
+
 ## Dev
 1. get the code
 ```git
@@ -46,6 +48,12 @@ After create view. You can find the view component in `./src/routers`. If you wa
 - [x] add react-loadable
 - [x] add command to generate view template.
 - [x] build in CI.
+- [x] 中文 Readme
 - [ ] add e2e test.
 - [ ] publish in npm.
-- [ ] 中文 Readme
+
+
+## License
+[MIT](https://github.com/Jandou6/tsspa/blob/master/LICENSE)
+
+Copyright (c) 2018-present, Jandou
