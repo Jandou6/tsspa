@@ -1,6 +1,6 @@
 {
   "name": "tsspa",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A spa web template base in TypeScript + React + webpack",
   "main": "dist/index.js",
   "repository": {

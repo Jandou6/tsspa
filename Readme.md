@@ -36,8 +36,12 @@ you can use CLI to create view.
 ```
 yarn cli -v
 ```
+After create view. You can find the view component in `./src/routers`. If you want to use this view, you need to regist in router `./src/routers/index.tsx`.
 ## TODO
 - [x] clean all the warnings
 - [x] add prod/dev config
 - [x] add react-loadable
 - [x] add command to generate view template.
+- [ ] build in CI.
+- [ ] publish in npm.
+- [ ] add e2e test.
