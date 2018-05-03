@@ -2,6 +2,8 @@
 
 A SPA Web use [Typescript](http://www.typescriptlang.org/) + [React](https://reactjs.org/) + [Webpack](http://webpack.github.io/)
 
+You can also use cli to create view.
+
 ## Dev
 1. get the code
 ```git
@@ -36,6 +38,7 @@ you can use CLI to create view.
 ```
 yarn cli -v
 ```
+> Tip:
 After create view. You can find the view component in `./src/routers`. If you want to use this view, you need to regist in router `./src/routers/index.tsx`.
 ## TODO
 - [x] clean all the warnings
