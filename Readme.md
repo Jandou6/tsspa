@@ -1,4 +1,4 @@
-# TSSPA
+# TSSPA [![Build Status](https://img.shields.io/travis/Jandou6/tsspa/master.svg)](https://travis-ci.org/Jandou6/tsspa/branches)
 
 A SPA Web use [Typescript](http://www.typescriptlang.org/) + [React](https://reactjs.org/) + [Webpack](http://webpack.github.io/)
 
