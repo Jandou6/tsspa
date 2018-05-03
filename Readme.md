@@ -48,3 +48,4 @@ After create view. You can find the view component in `./src/routers`. If you wa
 - [ ] build in CI.
 - [ ] publish in npm.
 - [ ] add e2e test.
+- [ ] 中文 Readme

@@ -78,17 +78,17 @@ module.exports = {
       },
       {
         test: /\.png$/,
-        use: `url-loader?limit=10&mimetype=image/png&name=asset/[name]_[chunkhash:5].[ext]&publicPath=${CONFIG.PUBLIC_PATH_ASSET}`,
+        use: `url-loader?limit=10&mimetype=image/png&name=assets/[name]_[hash:5].[ext]&publicPath=${CONFIG.PUBLIC_PATH_ASSET}`,
         exclude: /(node_modules|libs)/,
       },
       {
         test: /\.svg$/,
-        use: `url-loader?limit=10&mimetype=image/svg+xml&name=asset/[name]_[chunkhash:5].[ext]&publicPath=${CONFIG.PUBLIC_PATH_ASSET}`,
+        use: `url-loader?limit=10&mimetype=image/svg+xml&name=assets/[name]_[hash:5].[ext]&publicPath=${CONFIG.PUBLIC_PATH_ASSET}`,
         exclude: /(node_modules|libs)/,
       },
       {
         test: /\.(jpg|gif|ico)$/,
-        use: `url-loader?limit=10&name=asset/[name]_[chunkhash:5].[ext]&publicPath=${CONFIG.PUBLIC_PATH_ASSET}`,
+        use: `url-loader?limit=10&name=assets/[name]_[hash:5].[ext]&publicPath=${CONFIG.PUBLIC_PATH_ASSET}`,
         exclude: /(node_modules|libs)/,
       },
     ]
