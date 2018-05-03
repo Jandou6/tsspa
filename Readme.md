@@ -30,8 +30,14 @@ yarn build
 ```bash
 yarn start:prod
 ```
+
+## CLI
+you can use CLI to create view.
+```
+yarn cli -v
+```
 ## TODO
 - [x] clean all the warnings
 - [x] add prod/dev config
 - [x] add react-loadable
-- [ ] add command to generate view template
+- [x] add command to generate view template
