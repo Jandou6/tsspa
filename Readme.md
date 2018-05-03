@@ -45,7 +45,7 @@ After create view. You can find the view component in `./src/routers`. If you wa
 - [x] add prod/dev config
 - [x] add react-loadable
 - [x] add command to generate view template.
-- [ ] build in CI.
-- [ ] publish in npm.
+- [x] build in CI.
 - [ ] add e2e test.
+- [ ] publish in npm.
 - [ ] 中文 Readme
