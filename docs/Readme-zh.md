@@ -24,7 +24,7 @@ yarn start
 ```
 
 ## 生产环境
-1. 编译生成文件
+1. 编译生成文件
 ```bash
 yarn build
 ```
@@ -34,12 +34,12 @@ yarn start:prod
 ```
 
 ## CLI
-你可以使用以下命令工程化地构建页面。
+你可以使用以下命令工程化地构建页面。
 ```
 yarn cli -v
 ```
 > 温情提示:
-使用命令创建文件后。你可以在`./src/routers`里面找到刚才创建的文件。 如果你要使用该页面的话，你必须要在路由器`./src/routers/index.tsx`里面注册你的页面。
+使用命令创建文件后。你可以在`./src/routers`里面找到刚才创建的文件。 如果你要使用该页面的话，你必须要在路由器`./src/routers/index.tsx`里面注册你的页面。
 
 ## License
 [MIT](https://github.com/Jandou6/tsspa/blob/master/LICENSE)
