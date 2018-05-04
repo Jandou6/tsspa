@@ -2,9 +2,12 @@
 var program = require('commander');
 var async = require('async');
 var Metalsmith = require('metalsmith');
-var prompt = require('cli-prompt');
 var render = require('consolidate').handlebars.render;
 var shell = require('shelljs');
+var inquirer = require('inquirer');
+var fs = require('fs');
+var path = require('path');
+
 var view_name = '';
 program
   .version('0.0.1')
@@ -31,19 +34,37 @@ function title(str) {
   return str.substring(0,1).toUpperCase()+str.substring(1);
 }
 
-function ask(files, metalsmith, done){
-  var prompts = ['ViewName'];
-  var metadata = metalsmith.metadata();
+function check_dir_existsSync(path) {
+  return fs.existsSync(path);
+}
 
-  async.eachSeries(prompts, run, done);
-  function run(key, done){
-    prompt('  ' + key + ': ', function(val){
-      val = title(val);
-      key === 'ViewName' && (view_name = val);
-      metadata[key] = val;
-      done();
-    });
-  }
+function ask(files, metalsmith, done) {
+  var questions = [
+    {
+      type: 'input',
+      name: 'ViewName',
+      message: 'What is view name ?',
+      validate: function(value) {
+        const maybe_destination_path = path.resolve(__dirname,`../src/routers/${value}`)
+        if (check_dir_existsSync(maybe_destination_path)) {
+          return `View ${value} had been used.Please use other name.`
+        }
+       return !!value || 'Please enter a right view name.'
+      },
+      filter: String,
+    }
+  ];
+  inquirer.prompt(questions).then(answers => {
+    var metadata = metalsmith.metadata();
+    for(let key in answers) {
+      if (key === 'ViewName') {
+        answers[key] = title(answers[key]);
+        view_name = answers[key]
+      }
+      metadata[key] = answers[key];
+    }
+    done();
+  });
 }
 
 function template(files, metalsmith, done){
