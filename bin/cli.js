@@ -11,7 +11,7 @@ var path = require('path');
 var view_name = '';
 program
   .version('0.0.1')
-  .description('An application for pizzas ordering')
+  .description('View generater')
   .option('-v, --views', 'create views')
   .parse(process.argv);
 
