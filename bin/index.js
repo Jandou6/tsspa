@@ -84,8 +84,9 @@ function template(files, metalsmith, done){
   async.each(keys, run, done);
 
   function run(file, done){
-    var img_reg = /(jpg|png|svg)$/;
-    if (!img_reg.test(file)){
+    var img_reg = /(jpg|png|svg)$/; // ignore image
+    var template_reg = /^template/; // ignore template/template.
+    if (!img_reg.test(file) && !template_reg.test(file)){
       var str = files[file].contents.toString();
       render(str, metadata, function(err, res){
         if (err) return done(err);
