@@ -2,3 +2,4 @@ node_modules
 webpack/dll/*
 dist
 *.log
+build

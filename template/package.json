@@ -1,27 +1,9 @@
 {
-  "name": "tsspa",
-  "version": "0.1.0",
+  "name": "{{name}}",
+  "version": "{{version}}",
   "description": "A spa web template base in TypeScript + React + webpack",
   "main": "dist/index.js",
-  "bin": {
-    "tsspa": "bin/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jandou6/tsspa.git"
-  },
-  "keywords": [
-    "TypeScript",
-    "React",
-    "Webpack",
-    "SPA"
-  ],
-  "author": "Jandou",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Jandou6/tsspa/issues"
-  },
-  "homepage": "https://github.com/Jandou6/tsspa#readme",
+  "author": "{{author}}",
   "devDependencies": {
     "@types/react": "^16.3.12",
     "@types/react-css-modules": "^4.6.1",
