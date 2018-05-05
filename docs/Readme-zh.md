@@ -2,46 +2,38 @@
 [![Build Status](https://img.shields.io/travis/Jandou6/tsspa/master.svg)](https://travis-ci.org/Jandou6/tsspa/branches)
 [![GitHub license](https://img.shields.io/github/license/jandou6/tsspa.svg)](https://github.com/nhnent/tui.calendar/blob/master/LICENSE)
 
-基于 [Typescript](http://www.typescriptlang.org/) + [React](https://reactjs.org/) + [Webpack](http://webpack.github.io/) 的单页面
+TSSPA 是一个创建 基于 [Typescript](http://www.typescriptlang.org/) + [React](https://reactjs.org/) + [Webpack](http://webpack.github.io/) 单页面的脚手架工具。
 
-你可以使用CLI创造视图页面
-
-## 开发
-1. 获取代码
-```git
-git clone git@github.com:Jandou6/tsspa.git
-```
-2. 安装依赖
+## 怎么使用
+1. 获取 tsspa
 ```bash
-yarn install
-```
-3. 生成dll文件（提高开发编译速度）
-```bash
-yarn dll
+npm install tsspa -g
 ```
 
-4. 使用webpack开启服务器。
+2. 生成你的项目，例如：
 ```bash
-yarn start
+tsspa -i my_project
 ```
 
-## 生产环境
-1. 编译生成文件
-```bash
-yarn build
-```
-2. 使用express启动node服务器
-```bash
-yarn start:prod
-```
+3. 你能找到刚才建的项目 `my_project` .然后你可以:
 
-## CLI
-你可以使用以下命令工程化地构建页面。
-```
-yarn cli -v
-```
-> 温情提示:
-使用命令创建文件后。你可以在`./src/routers`里面找到刚才创建的文件。 如果你要使用该页面的话，你必须要在路由器`./src/routers/index.tsx`里面注册你的页面。
+    1. 打开你的项目 :
+    ```bash
+    open my_project
+    ````
+
+    2. 使用 `yarn` 或者 `npm` 去安装依赖文件
+    ```bash
+    yarn install
+    ````
+    3. 生成 dll 文件（为了更快速编译）
+    ```bash
+    yarn dll
+    ``` 
+    4. 使用webpack开启服务
+    ```bash
+    yarn dev
+    ```
 
 ## License
 [MIT](https://github.com/Jandou6/tsspa/blob/master/LICENSE)

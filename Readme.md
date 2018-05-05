@@ -2,48 +2,41 @@
 [![Build Status](https://img.shields.io/travis/Jandou6/tsspa/master.svg)](https://travis-ci.org/Jandou6/tsspa/branches)
 [![GitHub license](https://img.shields.io/github/license/jandou6/tsspa.svg)](https://github.com/nhnent/tui.calendar/blob/master/LICENSE)
 
-A SPA Web use [Typescript](http://www.typescriptlang.org/) + [React](https://reactjs.org/) + [Webpack](http://webpack.github.io/)
-
-You can also use cli to create view.
+TSSPA can generate  SPA Web in [Typescript](http://www.typescriptlang.org/) + [React](https://reactjs.org/) + [Webpack](http://webpack.github.io/) 
 
 [中文说明](https://github.com/Jandou6/tsspa/blob/master/docs/Readme-zh.md)
 
-## Dev
-1. get the code
-```git
-git clone git@github.com:Jandou6/tsspa.git
-```
-2. install dependencies
+## How to use
+1. get tsspa
 ```bash
-yarn install
-```
-3. genrate dll filename
-```bash
-yarn dll
+npm install tsspa -g
 ```
 
-4. start webpack dev server
+2. generate you project such as:
 ```bash
-yarn start
+tsspa -i my_project
 ```
 
-## Prod
-1. generate build files
-```bash
-yarn build
-```
-2. start a express prod server
-```bash
-yarn start:prod
-```
+3. you can see `my_project` had been created.Then you can:
 
-## CLI
-you can use CLI to create view.
-```
-yarn cli -v
-```
-> Tip:
-After create view. You can find the view component in `./src/routers`. If you want to use this view, you need to regist in router `./src/routers/index.tsx`.
+    1. open the project that you created :
+    ```bash
+    open my_project
+    ````
+
+    2. use `yarn` or `npm` to install Dependencies.
+    ```bash
+    yarn install
+    ````
+    3. generate dll file
+    ```bash
+    yarn dll
+    ``` 
+    4. use webpack to start server for this project.
+    ```bash
+    yarn dev
+    ```
+
 ## TODO
 - [x] clean all the warnings
 - [x] add prod/dev config
@@ -51,8 +44,9 @@ After create view. You can find the view component in `./src/routers`. If you wa
 - [x] add command to generate view template.
 - [x] build in CI.
 - [x] 中文 Readme
+- [x] publish in npm.
 - [ ] add e2e test.
-- [ ] publish in npm.
+
 
 
 ## License
