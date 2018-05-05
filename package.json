@@ -1,6 +1,6 @@
 {
   "name": "tsspa",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A TypeScript react spa web Generator CLI",
   "main": "dist/index.js",
   "bin": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/Jandou6/tsspa/issues"
   },
   "homepage": "https://github.com/Jandou6/tsspa#readme",
-  "devDependencies": {
+  "dependencies": {
     "async": "^2.6.0",
     "commander": "^2.15.1",
     "consolidate": "^0.15.1",
