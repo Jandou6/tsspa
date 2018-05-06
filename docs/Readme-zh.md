@@ -2,7 +2,7 @@
 [![Build Status](https://img.shields.io/travis/Jandou6/tsspa/master.svg)](https://travis-ci.org/Jandou6/tsspa/branches)
 [![GitHub license](https://img.shields.io/github/license/jandou6/tsspa.svg)](https://github.com/nhnent/tui.calendar/blob/master/LICENSE)
 
-TSSPA 是一个创建 基于 [Typescript](http://www.typescriptlang.org/) + [React](https://reactjs.org/) + [Webpack](http://webpack.github.io/) 单页面的脚手架工具。
+TSSPA 是一个创建基于 [Typescript](http://www.typescriptlang.org/) + [React](https://reactjs.org/) + [Webpack](http://webpack.github.io/) 单页面的脚手架工具。
 
 ## 怎么使用
 1. 获取 tsspa
@@ -26,14 +26,11 @@ tsspa -i my_project
     ```bash
     yarn install
     ````
-    3. 生成 dll 文件（为了更快速编译）
-    ```bash
-    yarn dll
-    ``` 
-    4. 使用webpack开启服务
+    3. 使用webpack开启服务
     ```bash
     yarn dev
     ```
+    4. 现在可以在你的浏览器里面打开 [http://localhost:8080](http://localhost:8080)
 
 ## License
 [MIT](https://github.com/Jandou6/tsspa/blob/master/LICENSE)

@@ -62,7 +62,7 @@
     "dev": "yarn start",
     "clean": "rm -rf ./dist",
     "cli": "node bin/cli",
-    "start": "node ./bin/dev.server.js",
+    "start": " ./scripts/dev_server.sh",
     "start:prod": "node ./bin/server.js",
     "build": "yarn clean && cross-env NODE_ENV=production webpack --progress",
     "dll": "cross-env NODE_ENV=production webpack --progress --colors --config webpack/dll.config.js"

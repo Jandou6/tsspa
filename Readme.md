@@ -28,14 +28,11 @@ tsspa -i my_project
     ```bash
     yarn install
     ````
-    3. generate dll file
-    ```bash
-    yarn dll
-    ``` 
-    4. use webpack to start server for this project.
+    3. use webpack to start server for this project.
     ```bash
     yarn dev
     ```
+    4. now you can open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ## TODO
 - [x] clean all the warnings

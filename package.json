@@ -1,6 +1,6 @@
 {
   "name": "tsspa",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A TypeScript react spa web Generator CLI",
   "main": "dist/index.js",
   "bin": {

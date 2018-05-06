@@ -34,7 +34,7 @@ if (program.init) {
     shell.exec(`cp -rf ${source_hide_path} ${project_path}`)
     shell.exec(`echo 'cd ${project_name}'`);
     shell.exec(`echo 'yarn install'`)
-    shell.exec(`echo 'yarn dll && yarn dev'`)
+    shell.exec(`echo 'yarn dev'`)
   });
 }
 
