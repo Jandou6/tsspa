@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { hot } from 'react-hot-loader';
 import * as CSSModules from 'react-css-modules';
 const style = require('./style.scss');
 import { Link } from 'react-router-dom';
 const img_path = require('../../assets/react.jpg');
 @CSSModules(style, {allowMultiple: true})
-export default class HomeComponent extends React.Component {
+class HomeComponent extends React.Component {
   render() {
     return (
       <div styleName="home-page">
@@ -16,3 +17,5 @@ export default class HomeComponent extends React.Component {
     );
   }
 }
+
+export default hot(module)(HomeComponent);

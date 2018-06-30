@@ -5,12 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 const CONFIG = require('./config');
 module.exports = {
-  entry: {
-    app: [
-      "webpack-dev-server/client?",
-      "webpack/hot/dev-server"
-    ]
-  },
   output: {
     filename: '[name].js',
   },
@@ -80,6 +74,7 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       filename: CONFIG.INDEX_HTML,

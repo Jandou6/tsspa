@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { hot } from 'react-hot-loader';
 import * as CSSModules from 'react-css-modules';
 const style = require('./style.scss');
 import { Link } from 'react-router-dom';
 @CSSModules(style, {allowMultiple: true})
-export default class AboutComponent extends React.Component {
+class AboutComponent extends React.Component {
   render() {
     return (
       <div styleName="about-page">
@@ -15,3 +16,4 @@ export default class AboutComponent extends React.Component {
     );
   }
 }
+export default hot(module)(AboutComponent);

@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { hot } from 'react-hot-loader';
 import * as CSSModules from 'react-css-modules';
 const style = require('./style.scss');
 import { Link } from 'react-router-dom';
-export default class {{ViewName}}Component extends React.Component {
+class {{ViewName}}Component extends React.Component {
   render() {
     return (
       <div styleName="{{ViewName}}-page">
@@ -14,3 +15,5 @@ export default class {{ViewName}}Component extends React.Component {
     );
   }
 }
+
+export default hot(module)({{ViewName}}Component);

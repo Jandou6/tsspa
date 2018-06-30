@@ -6,6 +6,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import { render } from 'react-dom';
+import { hot } from 'react-hot-loader';
 
 import * as Loadable from 'react-loadable';
 const HomeComponent = Loadable({
@@ -22,7 +23,7 @@ const AboutComponent = Loadable({
   },
 });
 
-export class RouterCompnent extends React.Component {
+export class RouterComp extends React.Component {
   render() {
     return (
       <Router>
@@ -34,3 +35,5 @@ export class RouterCompnent extends React.Component {
     );
   }
 }
+
+export const RouterCompnent = hot(module)(RouterComp);
