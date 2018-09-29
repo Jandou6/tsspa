@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const CONFIG = require('./config');
-
+const is_dev = process.env.NODE_ENV !== 'production';
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: {
     app: [
@@ -11,33 +12,48 @@ module.exports = {
   output: {
     path: CONFIG.DIST_PATH,
     publicPath: CONFIG.PUBLIC_PATH,
+    filename: 'app.js',
   },
 
   resolve: {
-    extensions: ['.webpack.js', '.ts', '.tsx', '.js'],
-    modules: [
-      'node_modules',
-    ],
-    alias: {
-      "@src": CONFIG.SRC_PATH,
-    },
+    extensions: ['.ts', '.tsx', '.css', '.js'],
   },
 
   module: {
     rules: [
       {
         test: /\.(ts|tsx)?$/,
+        exclude: /(node_modules)/,
         use: [
-          'happypack/loader?id=babel',
-          'happypack/loader?id=ts',
-        ],
-        exclude: /(node_modules)/
+          'babel-loader',
+        ]
       },
       {
-        test: /\.json$/,
-        loader: 'happypack/loader?id=json',
-        exclude: /(node_modules)/,
-      }
+        test: /\.(css)$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            publicPath: '/'
+          }
+        },
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: is_dev,
+            modules: true,
+            localIdentName: 'cmp_[local]_[hash:base64:5]',
+          },
+        },
+        'postcss-loader',
+      ],
+      },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: is_dev ? '[chunkname].css' : '[chunkname].[hash].css',
+      chunkFilename: is_dev ? '[name].css' : '[name].[hash].css',
+    })
+  ],
 }

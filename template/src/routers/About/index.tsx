@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import * as CSSModules from 'react-css-modules';
-const style = require('./style.scss');
+const style = require('./style');
 import { Link } from 'react-router-dom';
 @CSSModules(style, {allowMultiple: true})
 class AboutComponent extends React.Component {

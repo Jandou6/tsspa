@@ -1,8 +1,6 @@
-# {{name}}
+# test
 
 A TSSPA project.
-
-You can also use cli to create view.
 
 ## Dev
 1. install dependencies
@@ -27,10 +25,4 @@ yarn build
 2. start a express prod server
 ```bash
 yarn start:prod
-```
-
-## CLI
-you can use CLI to create view.
-```
-yarn cli -v
 ```

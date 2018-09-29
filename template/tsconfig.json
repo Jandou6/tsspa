@@ -10,10 +10,6 @@
     "removeComments": false,
     "sourceMap": true,
     "strictFunctionTypes": false,
-    "paths": {
-      "src": ["./src"],
-      "root": ["."]
-    },
     "baseUrl": "./"
   },
   "include": [

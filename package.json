@@ -1,6 +1,6 @@
 {
   "name": "tsspa",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "A TypeScript react spa web Generator CLI",
   "main": "dist/index.js",
   "bin": {
@@ -26,7 +26,6 @@
     "async": "^2.6.0",
     "commander": "^2.15.1",
     "consolidate": "^0.15.1",
-    "cross-env": "^5.1.4",
     "handlebars": "^4.0.11",
     "inquirer": "^5.2.0",
     "metalsmith": "^2.3.0",

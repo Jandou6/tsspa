@@ -1,9 +1,7 @@
 const merge = require('webpack-merge');
 const config_common = require('./webpack/common');
-const config_happypack = require('./webpack/happypack.config');
 
-let webpack_config =  merge.smart(config_common, config_happypack);
-
+let webpack_config =  config_common;
 if (process.env.NODE_ENV === 'production') {
   const config_prod = require('./webpack/prod');
   webpack_config = merge.smart(webpack_config, config_prod)
