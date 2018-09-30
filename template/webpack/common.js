@@ -32,7 +32,7 @@ module.exports = {
         test: /\.(css)$/,
         exclude: /node_modules/,
         use: [
-          is_dev ? 'css-hot-loader' : '',
+          is_dev ? 'css-hot-loader' : undefined,
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
@@ -48,7 +48,7 @@ module.exports = {
             },
           },
         'postcss-loader',
-      ],
+      ].filter((item) => item),
       },
     ],
   },
