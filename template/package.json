@@ -1,9 +1,9 @@
 {
-  "name": "test",
-  "version": "0.0.1",
+  "name": "{{name}}",
+  "version": "{{version}}",
   "description": "A spa web template base in TypeScript + React + webpack",
   "main": "dist/index.js",
-  "author": "tsspa",
+  "author": "{{author}}",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
