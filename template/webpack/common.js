@@ -31,20 +31,22 @@ module.exports = {
       {
         test: /\.(css)$/,
         exclude: /node_modules/,
-        use: [{
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            publicPath: '/'
-          }
-        },
-        {
-          loader: 'css-loader',
-          options: {
-            sourceMap: is_dev,
-            modules: true,
-            localIdentName: 'cmp_[local]_[hash:base64:5]',
+        use: [
+          is_dev ? 'css-hot-loader' : '',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '/'
+            }
           },
-        },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: is_dev,
+              modules: true,
+              localIdentName: 'cmp_[local]_[hash:base64:5]',
+            },
+          },
         'postcss-loader',
       ],
       },
